@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wictor William | Personal Trainer & Consultoria Online</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            fitness: {
+              accent: '#f97316', /* Laranja de alta intensidade */
+              accentHover: '#ea580c',
+              dark: '#0b0f19', /* Fundo escuro premium */
+              slate: '#1e293b',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; color: #0b0f19; overflow-x: hidden; }
+    
+    .hero-bg {
+      background: linear-gradient(rgba(11, 15, 25, 0.90), rgba(11, 15, 25, 0.95)), 
+                  url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+    }
+
+    .glass { backdrop-filter: blur(12px); background: rgba(248, 250, 252, 0.95); }
+    
+    .btn-premium {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(249, 115, 22, 0.3);
+    }
+
+    #mobile-menu { transition: 0.3s ease-in-out; transform-origin: top; }
+
+    /* TRANSITIONS (SCROLL REVEAL) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+  </style>
+</head>
+<body>
+
+  <header class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div class="text-2xl tracking-tighter text-fitness-dark font-extrabold uppercase">
+        Wictor William <span class="text-fitness-accent text-xs block tracking-widest font-bold -mt-1">Personal Trainer</span>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="#metodo" class="text-sm font-bold tracking-wide text-slate-500 hover:text-fitness-accent uppercase transition">O Método</a>
+        <a href="#especialidades" class="text-sm font-bold tracking-wide text-slate-500 hover:text-fitness-accent uppercase transition">Benefícios</a>
+        <a href="#sobre" class="text-sm font-bold tracking-wide text-slate-500 hover:text-fitness-accent uppercase transition">O Treinador</a>
+        <a href="https://api.whatsapp.com/send/?phone=5561981215031&text=Ol%C3%A1%20Wictor!%20Quero%20mudar%20meu%20shape%20e%20entrar%20para%20a%20sua%20consultoria%20online." target="_blank" class="btn-premium bg-fitness-dark text-white px-7 py-3 rounded-md text-xs font-bold tracking-widest uppercase hover:bg-fitness-accent transition">
+          Vagas Limitadas
+        </a>
+      </nav>
+
+      <button id="menu-toggle" class="lg:hidden text-fitness-dark"><i data-lucide="menu" class="w-7 h-7"></i></button>
+    </div>
+
+    <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-white border-b border-slate-200 flex-col p-8 gap-5 lg:hidden shadow-xl">
+      <a href="#metodo" class="mobile-link text-lg font-bold uppercase py-1 text-fitness-dark">O Método</a>
+      <a href="#especialidades" class="mobile-link text-lg font-bold uppercase py-1 text-fitness-dark">Benefícios</a>
+      <a href="#sobre" class="mobile-link text-lg font-bold uppercase py-1 text-fitness-dark">O Treinador</a>
+      <a href="https://api.whatsapp.com/send/?phone=5561981215031&text=Ol%C3%A1%20Wictor!%20Quero%20mudar%20meu%20shape%20e%20entrar%20para%20a%20sua%20consultoria%20online." target="_blank" class="bg-fitness-accent text-white py-4 rounded-md text-center font-extrabold tracking-wider uppercase text-sm">Vagas Limitadas</a>
+    </div>
+  </header>
+
+  <section class="hero-bg min-h-screen flex items-center pt-28">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 items-center gap-12 py-12">
+      <div class="lg:col-span-9 reveal">
+        <span class="inline-flex items-center gap-2 bg-fitness-accent text-white px-5 py-2 rounded-md font-bold text-xs uppercase tracking-widest mb-8">
+          <i data-lucide="map-pin" class="w-4 h-4 text-white"></i> Atendimento Online & Presencial — Águas Claras / Sudoeste
+        </span>
+        <h1 class="text-5xl lg:text-7xl leading-[1.1] text-white mb-6 font-extrabold tracking-tighter uppercase">
+          Mude de shape com quem <span class="text-fitness-accent">planeja o seu resultado.</span>
+        </h1>
+        <p class="text-lg text-slate-300 mb-12 leading-relaxed max-w-3xl font-medium">
+          Pare de fazer treinos aleatórios montados na hora. O segredo para um corpo definido, forte e estético está na precisão das variáveis. Conquiste a sua melhor versão com uma consultoria sob medida para a sua rotina.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="https://api.whatsapp.com/send/?phone=5561981215031&text=Ol%C3%A1%20Wictor!%20Quero%20mudar%20meu%20shape%20e%20entrar%20para%20a%20sua%20consultoria%20online." target="_blank" class="btn-premium bg-fitness-accent text-white px-10 py-5 rounded-md font-extrabold text-center text-sm tracking-widest uppercase shadow-lg shadow-fitness-accent/30 hover:bg-fitness-accentHover">
+            Quero Entrar Para O Time Agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-white border-t border-slate-100" id="metodo">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-20 reveal">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-fitness-dark mb-5 tracking-tight uppercase">Por que a consultoria é para você?</h2>
+        <p class="text-slate-500 font-medium text-lg">Ir para a academia sem saber exatamente o que fazer te faz perder tempo e motivação. O método certo foca no estímulo muscular exato que o seu corpo precisa para evoluir rápido.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-10 rounded-xl bg-slate-50 border border-slate-200 shadow-sm hover:border-fitness-accent/50 transition duration-300 reveal delay-100">
+          <div class="w-14 h-14 bg-fitness-dark text-fitness-accent rounded-lg flex items-center justify-center mb-8 shadow-md"><i data-lucide="trending-up" class="w-7 h-7"></i></div>
+          <h3 class="text-2xl font-bold mb-4 text-fitness-dark uppercase tracking-tight">Estímulo Certo</h3>
+          <p class="text-slate-600 font-medium leading-relaxed text-sm">Treinos estruturados considerando sua estrutura biomecânica e nível de treino atual para acelerar o ganho de massa magra e perda de gordura.</p>
+        </div>
+        <div class="p-10 rounded-xl bg-slate-50 border border-slate-200 shadow-sm hover:border-fitness-accent/50 transition duration-300 reveal delay-200">
+          <div class="w-14 h-14 bg-fitness-dark text-fitness-accent rounded-lg flex items-center justify-center mb-8 shadow-md"><i data-lucide="calendar" class="w-7 h-7"></i></div>
+          <h3 class="text-2xl font-bold mb-4 text-fitness-dark uppercase tracking-tight">Adequado à Sua Rotina</h3>
+          <p class="text-slate-600 font-medium leading-relaxed text-sm">Não importa se você tem 40 minutos ou 1 hora e meia por dia, o seu planejamento é montado de forma inteligente para extrair o máximo de resultado naquele tempo.</p>
+        </div>
+        <div class="p-10 rounded-xl bg-slate-50 border border-slate-200 shadow-sm hover:border-fitness-accent/50 transition duration-300 reveal delay-300">
+          <div class="w-14 h-14 bg-fitness-dark text-fitness-accent rounded-lg flex items-center justify-center mb-8 shadow-md"><i data-lucide="check" class="w-7 h-7"></i></div>
+          <h3 class="text-2xl font-bold mb-4 text-fitness-dark uppercase tracking-tight">Sem Erros</h3>
+          <p class="text-slate-600 font-medium leading-relaxed text-sm">Chega de dúvidas na execução. Com o aplicativo e direcionamento corretos, você sabe exatamente a carga, as repetições e o tempo de descanso perfeitos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-slate-50 border-t border-b border-slate-200" id="especialidades">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-20 reveal">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-white bg-fitness-accent px-4 py-1 rounded-full">Metodologia Exclusiva</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-fitness-dark mt-6 tracking-tight uppercase">Pilares do Planejamento</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform reveal delay-100">
+          <i data-lucide="award" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Hipertrofia</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Ganho estético de massa magra com foco em simetria e densidade muscular.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform reveal delay-200">
+          <i data-lucide="flame" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Emagrecimento</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Treinos intensos planejados para aumentar o gasto calórico contínuo.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform reveal delay-300">
+          <i data-lucide="zap" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Performance</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Evolução de força e melhora drástica no seu rendimento físico diário.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform reveal delay-100">
+          <i data-lucide="smartphone" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Suporte Direto</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Acompanhamento contínuo e feedbacks para te manter focado na meta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-white" id="sobre">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5 relative reveal">
+        <div class="absolute -inset-4 bg-fitness-accent rounded-xl -z-10 transform translate-x-2 translate-y-2"></div>
+        <img src="img/wictor.jpg" alt="Wictor William" class="rounded-xl w-full aspect-[4/5] object-cover shadow-xl bg-slate-200 grayscale hover:grayscale-0 transition duration-500"
+             onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop';">
+      </div>
+      <div class="lg:col-span-7 reveal delay-200">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-slate-400 block mb-2">Seu Treinador</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold mb-8 text-fitness-dark uppercase tracking-tighter">Wictor William</h2>
+        <div class="space-y-6 text-slate-600 text-base font-medium leading-relaxed">
+          <p>Como Personal Trainer focado em resultados reais, meu trabalho é tirar as suposições do seu caminho. Monto planejamentos estratégicos focados em <strong class="text-fitness-dark">mudar o formato e a estética do seu corpo</strong> de forma sustentável e profissional.</p>
+          <p>Seja de forma presencial na região de Águas Claras/Sudoeste ou por meio da minha estrutura de consultoria online, eu entrego o mapa exato do que você precisa fazer. Chega de treinos monótonos ou estagnação; é hora de evoluir com inteligência e alcançar o shape que você quer.</p>
+          
+          <div class="grid sm:grid-cols-2 gap-4 pt-6 text-sm text-fitness-dark font-bold uppercase">
+            <div class="flex items-center gap-3"><i data-lucide="shield-check" class="text-fitness-accent w-6 h-6"></i><span>Personal Trainer Referência</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="target" class="text-fitness-accent w-6 h-6"></i><span>Consultoria Focada em Shape</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-fitness-dark text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+      <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 uppercase tracking-tighter">Pronto para a sua melhor versão?</h2>
+      <p class="text-slate-400 text-lg lg:text-xl mb-12 font-medium max-w-2xl mx-auto leading-relaxed">As vagas na consultoria são preenchidas rapidamente para garantir atenção máxima por aluno. Toque abaixo e mude de nível.</p>
+      <a href="https://api.whatsapp.com/send/?phone=5561981215031&text=Ol%C3%A1%20Wictor!%20Quero%20mudar%20meu%20shape%20e%20entrar%20para%20a%20sua%20consultoria%20online." target="_blank" class="btn-premium inline-flex items-center gap-3 bg-fitness-accent text-white px-12 py-5 rounded-md font-extrabold text-sm tracking-widest uppercase hover:bg-fitness-accentHover shadow-xl shadow-fitness-accent/20">
+        <i data-lucide="dumbbell" class="w-5 h-5"></i> Iniciar Minha Consultoria
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center text-slate-400 text-xs font-bold tracking-wider uppercase">
+    <p>© 2026 Wictor William — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Mobile Menu Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll Reveal Animation Logic
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOptions = {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+      revealOnScroll.observe(el);
+    });
+  </script>
+</body>
+</html>
